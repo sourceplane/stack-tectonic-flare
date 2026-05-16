@@ -1,0 +1,217 @@
+{
+  "apiVersion": "orun.io/v1",
+  "kind": "Plan",
+  "metadata": {
+    "name": "stack-tectonic-flare",
+    "description": "Reusable Cloudflare and Supabase multi-tenant SaaS starter",
+    "generatedAt": "2026-05-16T04:29:53Z",
+    "checksum": "sha256-e12b28534c03d8ec178deb5d865e18455fcd675c04e53b68fc64b31946c58d88"
+  },
+  "execution": {
+    "concurrency": 4,
+    "failFast": true
+  },
+  "spec": {
+    "jobBindings": {
+      "cloudflare-pages": "tectonic-flare",
+      "cloudflare-pages-terraform": "tectonic-flare",
+      "cloudflare-pages-turbo": "tectonic-flare",
+      "cloudflare-pages-turbo-terraform": "tectonic-flare",
+      "cloudflare-worker": "tectonic-flare",
+      "cloudflare-worker-turbo": "tectonic-flare",
+      "publish-stack": "tectonic-flare",
+      "terraform": "tectonic-flare",
+      "turbo-package": "tectonic-flare"
+    },
+    "compositionSources": [
+      {
+        "name": "stack-tectonic-flare",
+        "kind": "dir",
+        "path": "./stacks/stack-tectonic-flare",
+        "resolvedDigest": "sha256:8d650f7aabe75b4c8d55dfcb39e9af0653b67567a17db0faba4bf847ba62de1a",
+        "exports": [
+          "cloudflare-pages",
+          "cloudflare-pages-terraform",
+          "cloudflare-pages-turbo",
+          "cloudflare-pages-turbo-terraform",
+          "cloudflare-worker",
+          "cloudflare-worker-turbo",
+          "publish-stack",
+          "terraform",
+          "turbo-package"
+        ]
+      }
+    ]
+  },
+  "jobs": [
+    {
+      "id": "stack-tectonic.production.publish",
+      "uid": "job_e12b285_594f22360c64",
+      "displayName": "Publish",
+      "checkName": "stack-tectonic · production · Publish",
+      "name": "publish",
+      "component": "stack-tectonic",
+      "environment": "production",
+      "composition": "publish-stack",
+      "profile": "publish-stack.release",
+      "profileSource": "subscription",
+      "jobRegistry": "tectonic-flare",
+      "job": "publish",
+      "runsOn": "ubuntu-22.04",
+      "path": "stacks/stack-tectonic-flare",
+      "steps": [
+        {
+          "id": "setup-orun",
+          "name": "setup-orun",
+          "phase": "main",
+          "use": "sourceplane/orun-action@v1.1.0"
+        },
+        {
+          "id": "publish-dry-run",
+          "name": "publish-dry-run",
+          "phase": "main",
+          "run": "orun publish --dry-run\n",
+          "shell": "bash",
+          "onFailure": "stop"
+        },
+        {
+          "id": "publish",
+          "name": "publish",
+          "phase": "main",
+          "run": "orun publish\n",
+          "shell": "bash",
+          "onFailure": "stop"
+        }
+      ],
+      "timeout": "20m",
+      "env": {
+        "lane": "release",
+        "namespacePrefix": "prod-",
+        "registry": "ghcr.io/sourceplane/stack-tectonic",
+        "root": ".",
+        "version": "1.0.0"
+      },
+      "labels": {
+        "layer": "platform",
+        "provider": "orun"
+      },
+      "config": {
+        "lane": "release",
+        "namespacePrefix": "prod-",
+        "registry": "ghcr.io/sourceplane/stack-tectonic",
+        "root": ".",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "id": "stack-tectonic.dev.publish",
+      "uid": "job_e12b285_8ffe807038d5",
+      "displayName": "Publish",
+      "checkName": "stack-tectonic · dev · Publish",
+      "name": "publish",
+      "component": "stack-tectonic",
+      "environment": "dev",
+      "composition": "publish-stack",
+      "profile": "publish-stack.dry-run",
+      "profileSource": "subscription",
+      "jobRegistry": "tectonic-flare",
+      "job": "publish",
+      "runsOn": "ubuntu-22.04",
+      "path": "stacks/stack-tectonic-flare",
+      "steps": [
+        {
+          "id": "setup-orun",
+          "name": "setup-orun",
+          "phase": "main",
+          "use": "sourceplane/orun-action@v1.1.0"
+        },
+        {
+          "id": "publish-dry-run",
+          "name": "publish-dry-run",
+          "phase": "main",
+          "run": "orun publish --dry-run\n",
+          "shell": "bash",
+          "onFailure": "stop"
+        }
+      ],
+      "timeout": "20m",
+      "env": {
+        "lane": "dry-run",
+        "namespacePrefix": "dev-",
+        "registry": "ghcr.io/sourceplane/stack-tectonic",
+        "root": ".",
+        "version": "1.0.0"
+      },
+      "labels": {
+        "layer": "platform",
+        "provider": "orun"
+      },
+      "config": {
+        "lane": "dry-run",
+        "namespacePrefix": "dev-",
+        "registry": "ghcr.io/sourceplane/stack-tectonic",
+        "root": ".",
+        "version": "1.0.0"
+      }
+    },
+    {
+      "id": "stack-tectonic.staging.publish",
+      "uid": "job_e12b285_c5ff9743198c",
+      "displayName": "Publish",
+      "checkName": "stack-tectonic · staging · Publish",
+      "name": "publish",
+      "component": "stack-tectonic",
+      "environment": "staging",
+      "composition": "publish-stack",
+      "profile": "publish-stack.release",
+      "profileSource": "subscription",
+      "jobRegistry": "tectonic-flare",
+      "job": "publish",
+      "runsOn": "ubuntu-22.04",
+      "path": "stacks/stack-tectonic-flare",
+      "steps": [
+        {
+          "id": "setup-orun",
+          "name": "setup-orun",
+          "phase": "main",
+          "use": "sourceplane/orun-action@v1.1.0"
+        },
+        {
+          "id": "publish-dry-run",
+          "name": "publish-dry-run",
+          "phase": "main",
+          "run": "orun publish --dry-run\n",
+          "shell": "bash",
+          "onFailure": "stop"
+        },
+        {
+          "id": "publish",
+          "name": "publish",
+          "phase": "main",
+          "run": "orun publish\n",
+          "shell": "bash",
+          "onFailure": "stop"
+        }
+      ],
+      "timeout": "20m",
+      "env": {
+        "lane": "verify",
+        "namespacePrefix": "stg-",
+        "registry": "ghcr.io/sourceplane/stack-tectonic",
+        "root": ".",
+        "version": "1.0.0"
+      },
+      "labels": {
+        "layer": "platform",
+        "provider": "orun"
+      },
+      "config": {
+        "lane": "verify",
+        "namespacePrefix": "stg-",
+        "registry": "ghcr.io/sourceplane/stack-tectonic",
+        "root": ".",
+        "version": "1.0.0"
+      }
+    }
+  ]
+}

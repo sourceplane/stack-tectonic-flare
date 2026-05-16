@@ -1,0 +1,5 @@
+.workspace/
+.DS_Store
+
+# orun per-job staged workspaces
+.orun/runs/

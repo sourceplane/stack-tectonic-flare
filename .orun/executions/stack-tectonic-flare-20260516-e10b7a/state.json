@@ -1,0 +1,37 @@
+{
+  "execId": "stack-tectonic-flare-20260516-e10b7a",
+  "planChecksum": "sha256-e12b28534c03d8ec178deb5d865e18455fcd675c04e53b68fc64b31946c58d88",
+  "jobs": {
+    "stack-tectonic.dev.publish": {
+      "status": "completed",
+      "startedAt": "2026-05-16T04:29:53Z",
+      "finishedAt": "2026-05-16T04:30:06Z",
+      "steps": {
+        "publish-dry-run": "completed",
+        "setup-orun": "completed"
+      }
+    },
+    "stack-tectonic.production.publish": {
+      "status": "failed",
+      "startedAt": "2026-05-16T04:29:53Z",
+      "finishedAt": "2026-05-16T04:30:08Z",
+      "steps": {
+        "publish": "failed",
+        "publish-dry-run": "completed",
+        "setup-orun": "completed"
+      },
+      "lastError": "step publish: exit status 1"
+    },
+    "stack-tectonic.staging.publish": {
+      "status": "failed",
+      "startedAt": "2026-05-16T04:29:53Z",
+      "finishedAt": "2026-05-16T04:30:07Z",
+      "steps": {
+        "publish": "failed",
+        "publish-dry-run": "completed",
+        "setup-orun": "completed"
+      },
+      "lastError": "step publish: exit status 1"
+    }
+  }
+}

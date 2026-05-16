@@ -1,0 +1,28 @@
+{
+  "execId": "stack-tectonic-flare-20260516-c2fbb7",
+  "planId": "db447319e66a",
+  "planName": "stack-tectonic-flare",
+  "startedAt": "2026-05-16T04:30:25Z",
+  "finishedAt": "2026-05-16T04:30:30Z",
+  "status": "completed",
+  "trigger": "cli",
+  "user": "irinelinson",
+  "dryRun": false,
+  "jobTotal": 1,
+  "jobDone": 1,
+  "jobFailed": 0,
+  "links": [
+    {
+      "label": "[warning]An inter...",
+      "url": "https://www.githubstatus.com/",
+      "jobId": "stack-tectonic.dev.publish",
+      "stepId": "setup-orun"
+    },
+    {
+      "label": "Download",
+      "url": "https://github.com/sourceplane/orun/releases/download/v1.26.0/orun_1.26.0_darwin_arm64.tar.gz",
+      "jobId": "stack-tectonic.dev.publish",
+      "stepId": "setup-orun"
+    }
+  ]
+}
