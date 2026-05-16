@@ -15,7 +15,7 @@ spec:
         profile: release
       - name: production
         profile: release
-  inputs: []
+  inputs: ""
   labels:
     layer: platform
     provider: orun
