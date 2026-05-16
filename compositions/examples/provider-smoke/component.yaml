@@ -1,0 +1,23 @@
+apiVersion: sourceplane.io/v1
+kind: Component
+
+metadata:
+  name: provider-smoke
+
+spec:
+  type: workspace
+  domain: platform-foundation
+  subscribe:
+    environments:
+      - development
+      - staging
+  inputs:
+    chartPath: charts/hello-chart/chart
+    valuesFile: deploy/hello-deploy/values.yaml
+    kustomizeDir: smoke/kustomize
+    terraformDir: smoke/terraform
+    workflowFile: smoke/provider-smoke.yaml
+  labels:
+    team: platform
+    layer: foundation
+    surface: provider-smoke
