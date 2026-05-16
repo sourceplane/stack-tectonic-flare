@@ -4,7 +4,7 @@
 
 ## Purpose
 
-Verify static site builds locally and reconcile a Git-backed Cloudflare Pages project with Terraform
+Cloudflare Pages deployment managed with Terraform
 
 ## Contract
 
@@ -16,7 +16,7 @@ Verify static site builds locally and reconcile a Git-backed Cloudflare Pages pr
 
 These sample assets are excerpted or adapted from `example-platform-repo` so the contract is documented with realistic consumer-repo shapes.
 
-- `examples/docs-site-git`
+- Add a sample fixture under examples/.
 
 ## Test fixtures
 

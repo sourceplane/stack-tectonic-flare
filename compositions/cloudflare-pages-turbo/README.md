@@ -4,7 +4,7 @@
 
 ## Purpose
 
-Build a static app with Turbo and direct-upload it to Cloudflare Pages
+Cloudflare Pages deployment using Turbo monorepo builds
 
 ## Contract
 
@@ -16,7 +16,7 @@ Build a static app with Turbo and direct-upload it to Cloudflare Pages
 
 These sample assets are excerpted or adapted from `example-platform-repo` so the contract is documented with realistic consumer-repo shapes.
 
-- `examples/web-console`
+- Add a sample fixture under examples/.
 
 ## Test fixtures
 

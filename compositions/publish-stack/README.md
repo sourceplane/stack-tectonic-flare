@@ -4,34 +4,24 @@
 
 ## Purpose
 
-Publish an Orun stack to an OCI registry. Runs `orun publish --dry-run` on every pull request and performs the real publish on release.
+Publish an Orun stack to an OCI registry with dry-run validation
 
 ## Contract
 
 - **Type:** `publish-stack`
 - **Path:** `compositions/publish-stack`
-- **Definition:** `composition.yaml`
-
-## Profiles
-
-| Profile   | Description                                      |
-|-----------|--------------------------------------------------|
-| `dry-run` | PR validation — runs `orun publish --dry-run`    |
-| `verify`  | Staging validation — dry-run without publishing  |
-| `release` | Production — dry-run + real publish to registry  |
-
-## Inputs
-
-| Input      | Required | Description                                               |
-|------------|----------|-----------------------------------------------------------|
-| `registry` | yes      | OCI registry base URL, e.g. `ghcr.io/org/stack-name`     |
-| `version`  | yes      | Default version; overridden at runtime by `STACK_VERSION` |
-| `root`     | no       | Root directory of the stack (default `.`)                 |
+- **Definition:** `compositions.yaml`
 
 ## Example fixtures
 
-- `examples/`
+These sample assets are excerpted or adapted from `example-platform-repo` so the contract is documented with realistic consumer-repo shapes.
+
+- Add a sample fixture under examples/.
 
 ## Test fixtures
 
-- `tests/smoke`
+- Add a smoke or contract fixture under tests/.
+
+## Verification
+
+`./scripts/verify-composition.sh publish-stack` checks that this composition keeps its contract, fixture, and generated-doc scaffolding intact.

@@ -4,7 +4,7 @@
 
 ## Purpose
 
-Verify a Cloudflare Worker app and deploy it from the production branch
+Cloudflare Worker with Turborepo build, verify, and deploy pipeline
 
 ## Contract
 
@@ -16,11 +16,11 @@ Verify a Cloudflare Worker app and deploy it from the production branch
 
 These sample assets are excerpted or adapted from `example-platform-repo` so the contract is documented with realistic consumer-repo shapes.
 
-- `examples/api-edge`
+- Add a sample fixture under examples/.
 
 ## Test fixtures
 
-- `tests/smoke`
+- Add a smoke or contract fixture under tests/.
 
 ## Verification
 

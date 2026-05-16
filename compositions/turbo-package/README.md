@@ -4,7 +4,7 @@
 
 ## Purpose
 
-Verify a shared package in a pnpm and Turbo monorepo
+Turborepo package verification jobs
 
 ## Contract
 
@@ -16,11 +16,11 @@ Verify a shared package in a pnpm and Turbo monorepo
 
 These sample assets are excerpted or adapted from `example-platform-repo` so the contract is documented with realistic consumer-repo shapes.
 
-- `examples/platform-sdk`
+- Add a sample fixture under examples/.
 
 ## Test fixtures
 
-- `tests/smoke`
+- Add a smoke or contract fixture under tests/.
 
 ## Verification
 

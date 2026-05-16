@@ -4,7 +4,7 @@
 
 ## Purpose
 
-Verify a static app with Turbo locally and reconcile a Git-backed Cloudflare Pages project with Terraform
+Cloudflare Pages deployment using Turbo monorepo builds managed with Terraform
 
 ## Contract
 
@@ -16,7 +16,7 @@ Verify a static app with Turbo locally and reconcile a Git-backed Cloudflare Pag
 
 These sample assets are excerpted or adapted from `example-platform-repo` so the contract is documented with realistic consumer-repo shapes.
 
-- `examples/admin-console-git`
+- Add a sample fixture under examples/.
 
 ## Test fixtures
 

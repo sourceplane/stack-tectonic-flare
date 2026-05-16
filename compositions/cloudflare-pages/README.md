@@ -4,7 +4,7 @@
 
 ## Purpose
 
-Build static site assets and direct-upload them to Cloudflare Pages with Wrangler
+Cloudflare Pages build, verify, and deploy pipeline
 
 ## Contract
 
@@ -16,7 +16,7 @@ Build static site assets and direct-upload them to Cloudflare Pages with Wrangle
 
 These sample assets are excerpted or adapted from `example-platform-repo` so the contract is documented with realistic consumer-repo shapes.
 
-- `examples/docs-site`
+- Add a sample fixture under examples/.
 
 ## Test fixtures
 

@@ -16,11 +16,11 @@ Terraform validation jobs for infra components
 
 These sample assets are excerpted or adapted from `example-platform-repo` so the contract is documented with realistic consumer-repo shapes.
 
-- `examples/network-foundation`
+- Add a sample fixture under examples/.
 
 ## Test fixtures
 
-- `tests/smoke`
+- Add a smoke or contract fixture under tests/.
 
 ## Verification
 
