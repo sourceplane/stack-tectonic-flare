@@ -3,7 +3,7 @@ kind: Stack
 metadata:
   name: tectonic-flare
   title: Tectonic Flare Platform Stack
-  version: 2.0.0
+  version: 2.0.1
   description: Flare edition of full-lifecycle platform stack with profiles, triggers, and override policy.
   owner: sourceplane
   tags:
