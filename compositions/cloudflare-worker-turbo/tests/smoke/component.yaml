@@ -2,24 +2,22 @@ apiVersion: sourceplane.io/v1
 kind: Component
 
 metadata:
-  name: web-console-pages
+  name: api-edge-worker
 
 spec:
-  type: cloudflare-pages-turbo
-  domain: platform-ui
+  type: cloudflare-worker-turbo
+  domain: platform-runtime
   subscribe:
     environments:
-      - preview
+      - dev
       - staging
       - production
   inputs:
-    outputDir: dist
-    projectName: example-platform-web-console
     nodeVersion: "20"
     pnpmVersion: "10.12.1"
     productionBranch: main
   labels:
     team: platform
-    layer: delivery
-    surface: web-console
+    layer: runtime
+    surface: api
     runtime: cloudflare

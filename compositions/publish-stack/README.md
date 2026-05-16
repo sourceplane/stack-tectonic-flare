@@ -16,11 +16,13 @@ Publish an Orun stack to an OCI registry with dry-run validation
 
 These sample assets are excerpted or adapted from `example-platform-repo` so the contract is documented with realistic consumer-repo shapes.
 
-- Add a sample fixture under examples/.
+- `examples/component.yaml`
+- `examples/config.yaml`
 
 ## Test fixtures
 
-- Add a smoke or contract fixture under tests/.
+- `tests/smoke`
+- `tests/test.yaml`
 
 ## Verification
 

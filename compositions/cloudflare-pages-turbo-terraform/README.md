@@ -16,7 +16,7 @@ Cloudflare Pages deployment using Turbo monorepo builds managed with Terraform
 
 These sample assets are excerpted or adapted from `example-platform-repo` so the contract is documented with realistic consumer-repo shapes.
 
-- Add a sample fixture under examples/.
+- `examples/admin-console-git`
 
 ## Test fixtures
 

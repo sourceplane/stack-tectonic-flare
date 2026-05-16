@@ -16,7 +16,7 @@ Cloudflare Pages build, verify, and deploy pipeline
 
 These sample assets are excerpted or adapted from `example-platform-repo` so the contract is documented with realistic consumer-repo shapes.
 
-- Add a sample fixture under examples/.
+- `examples/docs-site`
 
 ## Test fixtures
 

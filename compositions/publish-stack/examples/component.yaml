@@ -1,0 +1,6 @@
+apiVersion: sourceplane.io/v1
+kind: Component
+metadata:
+  name: publish-stack-example
+spec:
+  type: publish-stack

@@ -9,8 +9,7 @@ spec:
   domain: platform-docs
   subscribe:
     environments:
-      - name: production
-        profile: deploy
+      - production
   inputs:
     siteDir: .
     installCommand: npm ci

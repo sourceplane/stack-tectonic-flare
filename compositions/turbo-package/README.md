@@ -16,11 +16,11 @@ Turborepo package verification jobs
 
 These sample assets are excerpted or adapted from `example-platform-repo` so the contract is documented with realistic consumer-repo shapes.
 
-- Add a sample fixture under examples/.
+- `examples/platform-sdk`
 
 ## Test fixtures
 
-- Add a smoke or contract fixture under tests/.
+- `tests/smoke`
 
 ## Verification
 

@@ -16,7 +16,7 @@ Cloudflare Pages deployment managed with Terraform
 
 These sample assets are excerpted or adapted from `example-platform-repo` so the contract is documented with realistic consumer-repo shapes.
 
-- Add a sample fixture under examples/.
+- `examples/docs-site-git`
 
 ## Test fixtures
 
