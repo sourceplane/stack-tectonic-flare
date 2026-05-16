@@ -15,7 +15,7 @@ done
 stack_version="$(awk '/^  version: /{print $2}' stack.yaml)"
 test -n "$stack_version"
 
-kiox -- orun publish "ghcr.io/sourceplane/stack-tectonic:${stack_version}" \
+kiox -- orun publish "ghcr.io/sourceplane/stack-tectonic-flare:${stack_version}" \
   --dry-run \
   --root . \
   --version "$stack_version"

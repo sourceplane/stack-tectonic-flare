@@ -1,9 +1,9 @@
 {
   "stack": {
-    "name": "stack-tectonic-flare",
-    "title": "Stack Tectonic Flare",
+    "name": "tectonic-flare",
+    "title": "Tectonic Flare Platform Stack",
     "version": "2.0.0",
-    "oci": "oci://ghcr.io/sourceplane/stack-tectonic-flare:2.0.0"
+    "oci": "oci://ghcr.io/sourceplane/tectonic-flare:2.0.0"
   },
   "catalog": {
     "compositions": [
@@ -11,11 +11,11 @@
         "name": "cloudflare-pages",
         "kind": "composition",
         "path": "compositions/cloudflare-pages",
-        "description": "Build static site assets and direct-upload them to Cloudflare Pages with Wrangler",
+        "description": "Cloudflare Pages build, verify, and deploy pipeline",
         "category": "hosting",
         "verified": true,
-        "score": 100,
-        "grade": "A+",
+        "score": 85,
+        "grade": "A",
         "tags": [
           "cloudflare",
           "hosting",
@@ -23,7 +23,7 @@
         ],
         "signals": {
           "readme": true,
-          "exampleAssets": 6,
+          "exampleAssets": 0,
           "testAssets": 1,
           "verifyWorkflow": true,
           "releaseWorkflow": true,
@@ -36,11 +36,11 @@
         "name": "cloudflare-pages-terraform",
         "kind": "composition",
         "path": "compositions/cloudflare-pages-terraform",
-        "description": "Verify static site builds locally and reconcile a Git-backed Cloudflare Pages project with Terraform",
+        "description": "Cloudflare Pages deployment managed with Terraform",
         "category": "platform",
         "verified": true,
-        "score": 100,
-        "grade": "A+",
+        "score": 85,
+        "grade": "A",
         "tags": [
           "cloudflare",
           "pages",
@@ -49,7 +49,7 @@
         ],
         "signals": {
           "readme": true,
-          "exampleAssets": 7,
+          "exampleAssets": 0,
           "testAssets": 1,
           "verifyWorkflow": true,
           "releaseWorkflow": true,
@@ -62,11 +62,11 @@
         "name": "cloudflare-pages-turbo",
         "kind": "composition",
         "path": "compositions/cloudflare-pages-turbo",
-        "description": "Build a static app with Turbo and direct-upload it to Cloudflare Pages",
+        "description": "Cloudflare Pages deployment using Turbo monorepo builds",
         "category": "hosting",
         "verified": true,
-        "score": 100,
-        "grade": "A+",
+        "score": 85,
+        "grade": "A",
         "tags": [
           "cloudflare",
           "hosting",
@@ -75,7 +75,7 @@
         ],
         "signals": {
           "readme": true,
-          "exampleAssets": 8,
+          "exampleAssets": 0,
           "testAssets": 1,
           "verifyWorkflow": true,
           "releaseWorkflow": true,
@@ -88,11 +88,11 @@
         "name": "cloudflare-pages-turbo-terraform",
         "kind": "composition",
         "path": "compositions/cloudflare-pages-turbo-terraform",
-        "description": "Verify a static app with Turbo locally and reconcile a Git-backed Cloudflare Pages project with Terraform",
+        "description": "Cloudflare Pages deployment using Turbo monorepo builds managed with Terraform",
         "category": "platform",
         "verified": true,
-        "score": 100,
-        "grade": "A+",
+        "score": 85,
+        "grade": "A",
         "tags": [
           "cloudflare",
           "pages",
@@ -102,7 +102,7 @@
         ],
         "signals": {
           "readme": true,
-          "exampleAssets": 9,
+          "exampleAssets": 0,
           "testAssets": 1,
           "verifyWorkflow": true,
           "releaseWorkflow": true,
@@ -115,11 +115,11 @@
         "name": "cloudflare-worker",
         "kind": "composition",
         "path": "compositions/cloudflare-worker",
-        "description": "Verify a Cloudflare Worker app and deploy it from the production branch",
+        "description": "Cloudflare Worker build, verify, and deploy pipeline",
         "category": "edge",
-        "verified": true,
-        "score": 100,
-        "grade": "A+",
+        "verified": false,
+        "score": 60,
+        "grade": "C",
         "tags": [
           "cloudflare",
           "edge",
@@ -127,8 +127,8 @@
         ],
         "signals": {
           "readme": true,
-          "exampleAssets": 9,
-          "testAssets": 1,
+          "exampleAssets": 0,
+          "testAssets": 0,
           "verifyWorkflow": true,
           "releaseWorkflow": true,
           "scorecardWorkflow": true,
@@ -140,11 +140,11 @@
         "name": "cloudflare-worker-turbo",
         "kind": "composition",
         "path": "compositions/cloudflare-worker-turbo",
-        "description": "Verify a Cloudflare Worker app and deploy it from the production branch",
+        "description": "Cloudflare Worker with Turborepo build, verify, and deploy pipeline",
         "category": "edge",
-        "verified": true,
-        "score": 100,
-        "grade": "A+",
+        "verified": false,
+        "score": 60,
+        "grade": "C",
         "tags": [
           "cloudflare",
           "edge",
@@ -153,8 +153,8 @@
         ],
         "signals": {
           "readme": true,
-          "exampleAssets": 9,
-          "testAssets": 1,
+          "exampleAssets": 0,
+          "testAssets": 0,
           "verifyWorkflow": true,
           "releaseWorkflow": true,
           "scorecardWorkflow": true,
@@ -163,48 +163,23 @@
         }
       },
       {
-        "name": "helm-chart",
+        "name": "publish-stack",
         "kind": "composition",
-        "path": "compositions/helm-chart",
-        "description": "Helm chart validation jobs for chart components",
-        "category": "kubernetes",
-        "verified": true,
-        "score": 100,
-        "grade": "A+",
+        "path": "compositions/publish-stack",
+        "description": "Publish an Orun stack to an OCI registry with dry-run validation",
+        "category": "developer-experience",
+        "verified": false,
+        "score": 60,
+        "grade": "C",
         "tags": [
-          "chart",
-          "helm",
-          "kubernetes"
+          "developer-experience",
+          "publish",
+          "stack"
         ],
         "signals": {
           "readme": true,
-          "exampleAssets": 5,
-          "testAssets": 1,
-          "verifyWorkflow": true,
-          "releaseWorkflow": true,
-          "scorecardWorkflow": true,
-          "semver": true,
-          "docsGood": true
-        }
-      },
-      {
-        "name": "helm-values",
-        "kind": "composition",
-        "path": "compositions/helm-values",
-        "description": "Helm values validation jobs for deployment files",
-        "category": "kubernetes",
-        "verified": true,
-        "score": 100,
-        "grade": "A+",
-        "tags": [
-          "helm",
-          "kubernetes",
-          "values"
-        ],
-        "signals": {
-          "readme": true,
-          "exampleAssets": 5,
-          "testAssets": 1,
+          "exampleAssets": 0,
+          "testAssets": 0,
           "verifyWorkflow": true,
           "releaseWorkflow": true,
           "scorecardWorkflow": true,
@@ -218,17 +193,17 @@
         "path": "compositions/terraform",
         "description": "Terraform validation jobs for infra components",
         "category": "infrastructure",
-        "verified": true,
-        "score": 100,
-        "grade": "A+",
+        "verified": false,
+        "score": 60,
+        "grade": "C",
         "tags": [
           "infrastructure",
           "terraform"
         ],
         "signals": {
           "readme": true,
-          "exampleAssets": 2,
-          "testAssets": 1,
+          "exampleAssets": 0,
+          "testAssets": 0,
           "verifyWorkflow": true,
           "releaseWorkflow": true,
           "scorecardWorkflow": true,
@@ -240,11 +215,11 @@
         "name": "turbo-package",
         "kind": "composition",
         "path": "compositions/turbo-package",
-        "description": "Verify a shared package in a pnpm and Turbo monorepo",
+        "description": "Turborepo package verification jobs",
         "category": "developer-experience",
-        "verified": true,
-        "score": 100,
-        "grade": "A+",
+        "verified": false,
+        "score": 60,
+        "grade": "C",
         "tags": [
           "developer-experience",
           "package",
@@ -252,32 +227,8 @@
         ],
         "signals": {
           "readme": true,
-          "exampleAssets": 8,
-          "testAssets": 1,
-          "verifyWorkflow": true,
-          "releaseWorkflow": true,
-          "scorecardWorkflow": true,
-          "semver": true,
-          "docsGood": true
-        }
-      },
-      {
-        "name": "workspace",
-        "kind": "composition",
-        "path": "compositions/workspace",
-        "description": "Workspace-backed provider smoke jobs",
-        "category": "developer-experience",
-        "verified": true,
-        "score": 100,
-        "grade": "A+",
-        "tags": [
-          "developer-experience",
-          "workspace"
-        ],
-        "signals": {
-          "readme": true,
-          "exampleAssets": 9,
-          "testAssets": 1,
+          "exampleAssets": 0,
+          "testAssets": 0,
           "verifyWorkflow": true,
           "releaseWorkflow": true,
           "scorecardWorkflow": true,
@@ -286,44 +237,6 @@
         }
       }
     ],
-    "blueprints": [
-      {
-        "name": "edge-worker-platform",
-        "kind": "blueprint",
-        "path": "blueprints/edge-worker-platform",
-        "description": "Edge-worker delivery with workspace verification, Terraform foundations, and deploy overlays.",
-        "uses": [
-          "workspace",
-          "terraform",
-          "cloudflare-worker",
-          "helm-values",
-          "Worker validation and deployment",
-          "Infra validation",
-          "Environment configuration overlays"
-        ],
-        "verified": true,
-        "score": 80,
-        "grade": "A"
-      },
-      {
-        "name": "nextjs-cloudflare",
-        "kind": "blueprint",
-        "path": "blueprints/nextjs-cloudflare",
-        "description": "Next.js monorepo delivery on Cloudflare with Terraform-managed Pages resources.",
-        "uses": [
-          "workspace",
-          "turbo-package",
-          "cloudflare-pages-turbo",
-          "cloudflare-pages-terraform",
-          "Shared workspace validation",
-          "Monorepo package verification",
-          "Git-backed Pages provisioning",
-          "Edge-hosted frontend delivery"
-        ],
-        "verified": true,
-        "score": 80,
-        "grade": "A"
-      }
-    ]
+    "blueprints": []
   }
 }
