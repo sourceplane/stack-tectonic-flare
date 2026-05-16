@@ -1,0 +1,7 @@
+apiVersion: kiox.io/v1
+kind: Workspace
+metadata:
+    name: stack-tectonic
+providers:
+    orun:
+        source: ghcr.io/sourceplane/orun:v1.12.0

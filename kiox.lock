@@ -1,0 +1,11 @@
+apiVersion: kiox.io/v1
+kind: WorkspaceLock
+metadata:
+    name: stack-tectonic
+providers:
+    - alias: orun
+      provider: sourceplane/orun
+      source: ghcr.io/sourceplane/orun:v1.12.0
+      version: v1.12.0
+      resolved: ghcr.io/sourceplane/orun@sha256:d27e781c68e531542a1968f524bdcf0471b9777f05e098f151bb02d06ba79f33
+      store: 994e4dd192cd8303e300f15146bf67d44c44df7a3befde5f07656a5695d2e961
