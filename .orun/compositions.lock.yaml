@@ -4,7 +4,7 @@ sources:
     - name: stack-tectonic-flare
       kind: dir
       path: ./stacks/stack-tectonic-flare
-      resolvedDigest: sha256:ec7dbcc14fbd39cf9d5bc96fa45d77dbb6f0564cda86a6cc0afb5de75b6d4232
+      resolvedDigest: sha256:cca6eff472998569a049bd2dc47455ab97faf7b5c0497ee3f12755db2dd725c2
       exports:
         - cloudflare-pages
         - cloudflare-pages-terraform

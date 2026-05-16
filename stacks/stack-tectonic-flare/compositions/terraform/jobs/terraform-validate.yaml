@@ -40,29 +40,29 @@ spec:
     - id: terraform-fmt-check
       name: fmt Check
       capability: terraform.fmt
-      run: terraform fmt -check
+      run: "{{if .terraformDir}}cd \"{{.terraformDir}}\" && {{end}}terraform fmt -check"
       onFailure: stop
 
     - id: terraform-init
       name: Init
       capability: terraform.init
-      run: terraform init 
+      run: "{{if .terraformDir}}cd \"{{.terraformDir}}\" && {{end}}terraform init"
       onFailure: stop
 
     - id: terraform-validate
       name: Validate
       capability: terraform.validate
-      run: terraform validate -no-color
+      run: "{{if .terraformDir}}cd \"{{.terraformDir}}\" && {{end}}terraform validate -no-color"
       onFailure: stop
 
     - id: terraform-plan
       name: Plan
       capability: terraform.plan
-      run: terraform plan -no-color
+      run: "{{if .terraformDir}}cd \"{{.terraformDir}}\" && {{end}}terraform plan -no-color"
       onFailure: stop
 
     - id: terraform-apply
       name: Apply
       capability: terraform.apply
-      run: terraform apply -no-color -auto-approve
+      run: "{{if .terraformDir}}cd \"{{.terraformDir}}\" && {{end}}terraform apply -no-color -auto-approve"
       onFailure: stop

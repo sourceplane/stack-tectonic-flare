@@ -2,7 +2,7 @@ apiVersion: sourceplane.io/v1
 kind: ComponentTree
 metadata:
     intent: /Users/irinelinson/sourceplane/stack-tectonic-flare/intent.yaml
-    generatedAt: "2026-05-16T05:39:35Z"
+    generatedAt: "2026-05-16T06:01:39Z"
 discovery:
     roots:
         - stacks
