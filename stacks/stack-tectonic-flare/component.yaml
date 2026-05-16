@@ -16,9 +16,7 @@ spec:
       - name: production
         profile: release
   inputs:
-    registry: ghcr.io/sourceplane/stack-tectonic
-    root: .
-    version: "1.0.0"
+    name: stack-tectonic-flare
   labels:
     layer: platform
     provider: orun

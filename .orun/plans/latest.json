@@ -4,8 +4,9 @@
   "metadata": {
     "name": "stack-tectonic-flare",
     "description": "Reusable Cloudflare and Supabase multi-tenant SaaS starter",
-    "generatedAt": "2026-05-16T04:30:25Z",
-    "checksum": "sha256-db447319e66a4cb78ac37b35e04a7f4265271547c5b224117c5e9d9a4aaca144"
+    "generatedAt": "2026-05-16T05:39:35Z",
+    "checksum": "sha256-bc9e38626bbef81c4bb2ccbc4e2c31da0a905f3de795715c63fe673201fd3b80",
+    "workDir": "."
   },
   "execution": {
     "concurrency": 4,
@@ -28,7 +29,7 @@
         "name": "stack-tectonic-flare",
         "kind": "dir",
         "path": "./stacks/stack-tectonic-flare",
-        "resolvedDigest": "sha256:8d650f7aabe75b4c8d55dfcb39e9af0653b67567a17db0faba4bf847ba62de1a",
+        "resolvedDigest": "sha256:ec7dbcc14fbd39cf9d5bc96fa45d77dbb6f0564cda86a6cc0afb5de75b6d4232",
         "exports": [
           "cloudflare-pages",
           "cloudflare-pages-terraform",
@@ -46,7 +47,7 @@
   "jobs": [
     {
       "id": "stack-tectonic.dev.publish",
-      "uid": "job_db44731_96d7e7d7c8ab",
+      "uid": "job_bc9e386_e9478c5d1840",
       "displayName": "Publish",
       "checkName": "stack-tectonic · dev · Publish",
       "name": "publish",
@@ -78,10 +79,8 @@
       "timeout": "20m",
       "env": {
         "lane": "dry-run",
-        "namespacePrefix": "dev-",
-        "registry": "ghcr.io/sourceplane/stack-tectonic",
-        "root": ".",
-        "version": "1.0.0"
+        "name": "stack-tectonic-flare",
+        "namespacePrefix": "dev-"
       },
       "labels": {
         "layer": "platform",
@@ -89,10 +88,8 @@
       },
       "config": {
         "lane": "dry-run",
-        "namespacePrefix": "dev-",
-        "registry": "ghcr.io/sourceplane/stack-tectonic",
-        "root": ".",
-        "version": "1.0.0"
+        "name": "stack-tectonic-flare",
+        "namespacePrefix": "dev-"
       }
     }
   ]

@@ -20,9 +20,6 @@ spec:
         const: publish-stack
       inputs:
         type: object
-        required:
-          - registry
-          - version
         properties:
           registry:
             type: string
@@ -33,5 +30,5 @@ spec:
           root:
             type: string
             description: Root directory of the stack (default ".")
-        additionalProperties: false
+        additionalProperties: true
     additionalProperties: true

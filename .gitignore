@@ -3,3 +3,4 @@
 
 # orun per-job staged workspaces
 .orun/runs/
+.orun/
