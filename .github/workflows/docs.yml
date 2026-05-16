@@ -1,0 +1,35 @@
+name: Docs
+
+on:
+  pull_request:
+    paths:
+      - "README.md"
+      - "docs/**"
+      - "blueprints/**"
+      - "compositions/**"
+      - "scripts/generate-readme.sh"
+  push:
+    branches:
+      - main
+    paths:
+      - "README.md"
+      - "docs/**"
+      - "blueprints/**"
+      - "compositions/**"
+      - "scripts/generate-readme.sh"
+
+permissions:
+  contents: read
+
+jobs:
+  docs-check:
+    name: Check generated catalog docs
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Make helper scripts executable
+        run: chmod +x scripts/*.sh
+
+      - name: Check composition docs
+        run: ./scripts/generate-readme.sh --check

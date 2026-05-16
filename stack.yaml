@@ -1,0 +1,19 @@
+apiVersion: orun.io/v1
+kind: Stack
+metadata:
+  name: tectonic-flare
+  title: Tectonic Flare Platform Stack
+  version: 2.0.0
+  description: Flare edition of full-lifecycle platform stack with profiles, triggers, and override policy.
+  owner: sourceplane
+  tags:
+    - terraform
+    - helm
+    - cloudflare
+    - turbo
+    - platform
+registry:
+  host: ghcr.io
+  namespace: sourceplane
+  repository: saas-stack-tectonic-flare
+  visibility: public

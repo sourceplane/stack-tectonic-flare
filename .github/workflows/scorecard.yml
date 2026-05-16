@@ -1,0 +1,35 @@
+name: Scorecard
+
+on:
+  pull_request:
+    paths:
+      - "compositions/**"
+      - "blueprints/**"
+      - "registry/**"
+      - "scripts/score.sh"
+      - ".github/workflows/scorecard.yml"
+  push:
+    branches:
+      - main
+    paths:
+      - "compositions/**"
+      - "blueprints/**"
+      - "registry/**"
+      - "scripts/score.sh"
+      - ".github/workflows/scorecard.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  scorecard:
+    name: Check generated scorecard
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Make helper scripts executable
+        run: chmod +x scripts/*.sh
+
+      - name: Check registry index
+        run: ./scripts/score.sh --check
