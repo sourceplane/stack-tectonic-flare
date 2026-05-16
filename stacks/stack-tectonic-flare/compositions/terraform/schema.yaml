@@ -20,9 +20,6 @@ spec:
         const: terraform
       inputs:
         type: object
-        required:
-          - stackName
-          - terraformDir
         properties:
           stackName:
             type: string
