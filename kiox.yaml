@@ -4,4 +4,4 @@ metadata:
     name: stack-tectonic
 providers:
     orun:
-        source: ghcr.io/sourceplane/orun:v1.12.0
+        source: ghcr.io/sourceplane/orun:v1.26.0

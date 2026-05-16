@@ -1,0 +1,89 @@
+apiVersion: sourceplane.io/v1
+kind: Intent
+metadata:
+  name: stack-tectonic-flare
+  description: Reusable Cloudflare and Supabase multi-tenant SaaS starter
+execution:
+  state:
+    backendUrl: https://orun-api.sourceplane.ai
+compositions:
+  sources:
+    - name: stack-tectonic-flare
+      kind: local
+      ref: ./stacks
+
+discovery:
+  roots:
+    - stacks/
+
+automation:
+  triggerBindings:
+    github-pull-request:
+      description: Pull request validation
+      on:
+        provider: github
+        event: pull_request
+        actions:
+          - opened
+          - synchronize
+          - reopened
+          - ready_for_review
+        baseBranches:
+          - main
+      plan:
+        scope: changed
+        base: pull_request.base.sha
+        head: pull_request.head.sha
+
+    github-push-main:
+      description: Main branch verification after merge
+      on:
+        provider: github
+        event: push
+        branches:
+          - main
+      plan:
+        scope: changed
+        base: before
+        head: after
+
+    github-tag-release:
+      description: Release tag planning
+      on:
+        provider: github
+        event: push
+        tags:
+          - "v*"
+      plan:
+        scope: full
+
+environments:
+  dev:
+    activation:
+      triggerRefs:
+        - github-pull-request
+    defaults:
+      lane: dry-run
+      namespacePrefix: dev-
+    policies:
+      requireApproval: "false"
+
+  staging:
+    activation:
+      triggerRefs:
+        - github-push-main
+    defaults:
+      lane: verify
+      namespacePrefix: stg-
+    policies:
+      requireApproval: "true"
+
+  production:
+    activation:
+      triggerRefs:
+        - github-tag-release
+    defaults:
+      lane: release
+      namespacePrefix: prod-
+    policies:
+      requireApproval: "true"
