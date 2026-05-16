@@ -9,8 +9,8 @@ execution:
 compositions:
   sources:
     - name: stack-tectonic-flare
-      kind: local
-      ref: ./stacks
+      kind: dir
+      path: ./stacks/stack-tectonic-flare
 
 discovery:
   roots:

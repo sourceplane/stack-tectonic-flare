@@ -1,0 +1,9 @@
+
+  package    tectonic-flare
+  version    2.0.0
+  files      64
+  registry   ghcr.io/sourceplane/saas-stack-tectonic-flare
+  source     inferred from stack.yaml registry block
+
+✓ dry run: no files uploaded
+→ would push to ghcr.io/sourceplane/saas-stack-tectonic-flare:2.0.0

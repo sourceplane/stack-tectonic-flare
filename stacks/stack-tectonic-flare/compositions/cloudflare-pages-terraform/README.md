@@ -4,7 +4,7 @@
 
 ## Purpose
 
-Cloudflare Pages deployment managed with Terraform
+Verify static site builds locally and reconcile a Git-backed Cloudflare Pages project with Terraform
 
 ## Contract
 

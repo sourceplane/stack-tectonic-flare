@@ -1,0 +1,46 @@
+{
+  "execId": "stack-tectonic-flare-20260516-e10b7a",
+  "planId": "e12b28534c03",
+  "planName": "stack-tectonic-flare",
+  "startedAt": "2026-05-16T04:29:53Z",
+  "finishedAt": "2026-05-16T04:30:08Z",
+  "status": "failed",
+  "trigger": "cli",
+  "user": "irinelinson",
+  "dryRun": false,
+  "jobTotal": 3,
+  "jobDone": 1,
+  "jobFailed": 2,
+  "links": [
+    {
+      "label": "[warning]An inter...",
+      "url": "https://www.githubstatus.com/",
+      "jobId": "stack-tectonic.dev.publish",
+      "stepId": "setup-orun"
+    },
+    {
+      "label": "Download",
+      "url": "https://github.com/sourceplane/orun/releases/download/v1.26.0/orun_1.26.0_darwin_arm64.tar.gz",
+      "jobId": "stack-tectonic.dev.publish",
+      "stepId": "setup-orun"
+    },
+    {
+      "label": "✕ oras push fai...",
+      "url": "https://ghcr.io/v2/sourceplane/saas-stack-tectonic-flare/manifests/sha256:7e161027ec210f0d3f71cf76c3bcae238a7c7c2deaf7f4e0a0c3449a7fad4311\":",
+      "jobId": "stack-tectonic.staging.publish",
+      "stepId": "publish"
+    },
+    {
+      "label": "✕ oras push fai...",
+      "url": "https://ghcr.io/token?scope=repository%3Asourceplane%2Fsaas-stack-tectonic-flare%3Apull\u0026service=ghcr.io\":",
+      "jobId": "stack-tectonic.staging.publish",
+      "stepId": "publish"
+    },
+    {
+      "label": "✕ oras push fai...",
+      "url": "https://ghcr.io/v2/sourceplane/saas-stack-tectonic-flare/manifests/sha256:1ce6d8f46493bedfb31ef723d7d03ece85a2f26e7797c289f689430a57ebd7e0\":",
+      "jobId": "stack-tectonic.production.publish",
+      "stepId": "publish"
+    }
+  ]
+}

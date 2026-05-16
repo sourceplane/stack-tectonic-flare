@@ -1,0 +1,9 @@
+
+  package    tectonic-flare
+  version    2.0.0
+  files      64
+  registry   ghcr.io/sourceplane/saas-stack-tectonic-flare
+  source     inferred from stack.yaml registry block
+
+□ Packaging and uploading...
+✕ oras push failed: failed to perform "Exists" on destination: HEAD "https://ghcr.io/v2/sourceplane/saas-stack-tectonic-flare/manifests/sha256:1ce6d8f46493bedfb31ef723d7d03ece85a2f26e7797c289f689430a57ebd7e0": GET "https://ghcr.io/token?scope=repository%3Asourceplane%2Fsaas-stack-tectonic-flare%3Apull&service=ghcr.io": response status code 403: denied: requested access to the resource is denied

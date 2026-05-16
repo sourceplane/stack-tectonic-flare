@@ -1,0 +1,17 @@
+apiVersion: sourceplane.io/v1alpha1
+kind: CompositionLock
+sources:
+    - name: stack-tectonic-flare
+      kind: dir
+      path: ./stacks/stack-tectonic-flare
+      resolvedDigest: sha256:8d650f7aabe75b4c8d55dfcb39e9af0653b67567a17db0faba4bf847ba62de1a
+      exports:
+        - cloudflare-pages
+        - cloudflare-pages-terraform
+        - cloudflare-pages-turbo
+        - cloudflare-pages-turbo-terraform
+        - cloudflare-worker
+        - cloudflare-worker-turbo
+        - publish-stack
+        - terraform
+        - turbo-package

@@ -4,7 +4,7 @@
 
 ## Purpose
 
-Turborepo package verification jobs
+Verify a shared package in a pnpm and Turbo monorepo
 
 ## Contract
 

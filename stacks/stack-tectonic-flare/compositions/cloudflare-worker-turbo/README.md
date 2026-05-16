@@ -4,7 +4,7 @@
 
 ## Purpose
 
-Cloudflare Worker with Turborepo build, verify, and deploy pipeline
+Verify a Cloudflare Worker app and deploy it from the production branch
 
 ## Contract
 

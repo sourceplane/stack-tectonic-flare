@@ -4,7 +4,7 @@
 
 ## Purpose
 
-Cloudflare Pages deployment using Turbo monorepo builds
+Build a static app with Turbo and direct-upload it to Cloudflare Pages
 
 ## Contract
 

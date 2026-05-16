@@ -1,5 +1,0 @@
-nameOverride: identity-portal
-config:
-  message: identity portal delivery values
-  environment: development
-  color: amber

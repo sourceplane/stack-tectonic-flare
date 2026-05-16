@@ -2,7 +2,7 @@ apiVersion: sourceplane.io/v1
 kind: Component
 
 metadata:
-  name: stack-tectonic-flare
+  name: stack-tectonic
 
 spec:
   type: publish-stack
@@ -16,7 +16,7 @@ spec:
       - name: production
         profile: release
   inputs:
-    registry: ghcr.io/sourceplane/stack-tectonic-flare
+    registry: ghcr.io/sourceplane/stack-tectonic
     root: .
     version: "1.0.0"
   labels:

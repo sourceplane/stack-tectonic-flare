@@ -1,0 +1,33 @@
+apiVersion: sourceplane.io/v1
+kind: ComponentTree
+metadata:
+    intent: /Users/irinelinson/sourceplane/stack-tectonic-flare/intent.yaml
+    generatedAt: "2026-05-16T04:30:25Z"
+discovery:
+    roots:
+        - stacks
+components:
+    - name: stack-tectonic
+      type: publish-stack
+      domain: platform-stack
+      enabled: false
+      path: stacks/stack-tectonic-flare
+      subscribe:
+        environments:
+            - name: dev
+              profile: dry-run
+            - name: staging
+              profile: release
+            - name: production
+              profile: release
+      inputs:
+        registry: ghcr.io/sourceplane/stack-tectonic
+        root: .
+        version: 1.0.0
+      labels:
+        layer: platform
+        provider: orun
+      source: discovered
+      sourcePath: stacks/stack-tectonic-flare/component.yaml
+      fileSize: 446
+      fileModTime: "2026-05-16T04:24:10.752161673Z"

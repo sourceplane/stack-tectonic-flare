@@ -4,7 +4,7 @@
 
 ## Purpose
 
-Cloudflare Pages deployment using Turbo monorepo builds managed with Terraform
+Verify a static app with Turbo locally and reconcile a Git-backed Cloudflare Pages project with Terraform
 
 ## Contract
 

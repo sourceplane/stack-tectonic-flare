@@ -4,7 +4,7 @@
 
 ## Purpose
 
-Cloudflare Pages build, verify, and deploy pipeline
+Build static site assets and direct-upload them to Cloudflare Pages with Wrangler
 
 ## Contract
 
