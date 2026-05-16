@@ -15,7 +15,8 @@ spec:
         profile: release
       - name: production
         profile: release
-  inputs: ""
+  inputs:
+    name: stack-tectonic-flare
   labels:
     layer: platform
     provider: orun
