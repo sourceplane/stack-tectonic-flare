@@ -20,6 +20,10 @@ jobs:
         with:
           fetch-depth: 0
       - uses: sourceplane/orun-action@v1.2.0
+        with:
+          # Match the orun pinned in kiox.lock. The action defaults to `latest`,
+          # which drifted to v2.38.0 and fails remote-state OIDC exchange with 403.
+          version: v1.26.0
       - run: |
           orun plan \
               --changed \
@@ -56,6 +60,8 @@ jobs:
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
       - uses: sourceplane/orun-action@v1.1.0
+        with:
+          version: v1.26.0
       - run: |
           orun run \
             --plan plan.json \
